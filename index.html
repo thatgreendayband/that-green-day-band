@@ -59,11 +59,10 @@
                             Tailgaters
                             <div class="show-location">Bolingbrook, IL</div>
                         </div>
-                        <a href="#" class="show-btn">Details</a>
+                        <!-- We changed href="#" to an onclick event -->
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters', 'August 24, 2026', '8:00 PM', 'Bolingbrook, IL', 'Ticket link coming soon!')">Details</a>
                     </div>
                     <!-- SHOW ITEM END -->
-
-                    <!-- COPY AND PASTE THE BLOCK ABOVE FOR MORE SHOWS -->
 
                 </div>
             </div>
@@ -72,14 +71,12 @@
         <section id="media">
             <h2 class="section-title">THE <span class="text-neon">ARCHIVE</span></h2>
             <div class="media-grid">
+                <!-- Two YouTube placeholders, no audio box -->
                 <div class="video-box">
-                    [ YOUTUBE EMBED ]
+                    <p style="text-align: center; color: #666; margin-top: 25%;">[ YOUTUBE EMBED 1 ]</p>
                 </div>
                 <div class="video-box">
-                    [ YOUTUBE EMBED ]
-                </div>
-                <div class="audio-box glass-panel">
-                    <p style="font-family: 'Anton'; font-size: 1.5rem; letter-spacing: 2px; color: #666;">[ SPOTIFY PLAYER EMBED ]</p>
+                    <p style="text-align: center; color: #666; margin-top: 25%;">[ YOUTUBE EMBED 2 ]</p>
                 </div>
             </div>
         </section>
@@ -88,11 +85,52 @@
     <footer>
         <div class="socials">
             <a href="#">INSTAGRAM</a>
+            <a href="#">FACEBOOK</a>
             <a href="#">YOUTUBE</a>
-            <a href="#">BOOKING</a>
+            <a href="#">TIKTOK</a>
         </div>
         <p style="color: #666; font-size: 0.9rem;">&copy; 2026 That Green Day Band.</p>
     </footer>
+
+    <!-- MODAL HTML STRUCTURE -->
+    <div id="showModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title" id="modalVenue">Venue Name</h3>
+            <div class="modal-details">
+                <p id="modalDate">Date</p>
+                <p id="modalTime">Time</p>
+                <p id="modalLocation">Location</p>
+                <p id="modalNotes" style="color: var(--hot-pink); margin-top: 1.5rem; font-weight: bold;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL INTERACTION -->
+    <script>
+        const modal = document.getElementById("showModal");
+
+        function openModal(venue, date, time, location, notes) {
+            document.getElementById("modalVenue").innerText = venue;
+            document.getElementById("modalDate").innerText = date;
+            document.getElementById("modalTime").innerText = "Doors: " + time;
+            document.getElementById("modalLocation").innerText = location;
+            document.getElementById("modalNotes").innerText = notes;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal if user clicks anywhere outside the box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4bb4da0e775347f1a2bf1a5d3f236640","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
