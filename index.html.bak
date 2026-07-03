@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,12 +102,11 @@
 
         /* HERO SECTION */
         header {
-            min-height: 100vh;
+            padding: 12rem 5% 6rem 5%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 0 5%;
         }
 
         .hero-content {
@@ -156,25 +154,18 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 2rem;
-            align-items: center;
+            align-items: start;
         }
 
         .bio-image {
             grid-column: 1 / 7;
-            height: auto;
-            background: linear-gradient(45deg, #111, #222);
             border-radius: 24px;
             border: 2px solid var(--neon-green);
             transform: rotate(-3deg);
             transition: transform 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Anton';
-            color: #444;
-            font-size: 2rem;
             position: relative;
             z-index: 1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .bio-image:hover {
@@ -185,7 +176,7 @@
         .bio-text {
             grid-column: 6 / 13;
             z-index: 2;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         .bio-text p {
@@ -298,7 +289,7 @@
         <section id="about">
             <div class="bio-grid">
                 <div class="bio-image">
-                    <img src="group-shot.png" alt="That Green Day Band" style="width: 100%; height: 100%; object-fit: cover; border-radius: 22px;">
+                    <img src="group-shot_2.png" alt="That Green Day Band" style="width: 100%; display: block; border-radius: 22px;">
                 </div>
                 <div class="bio-text glass-panel">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LOUD & <span class="text-neon">FAST</span></h2>
