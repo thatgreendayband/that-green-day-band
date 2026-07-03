@@ -81,8 +81,93 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <section id="media">
             <h2 class="section-title">MEDIA <span class="text-neon">ARCHIVE</span></h2>
+			
+			<section id="media">
+            <h2 class="section-title">MEDIA <span class="text-neon">ARCHIVE</span></h2>
+            
+            <!-- PHOTO GALLERY START -->
+            <div class="photo-gallery">
+                
+                <!-- PHOTO 1 -->
+                <div class="gallery-item" onclick="openLightbox('photos/01.jpg')">
+                    <img src="photos/01.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 2 -->
+                <div class="gallery-item" onclick="openLightbox('photos/02.jpg')">
+                    <img src="photos/02.jpg" alt="Matty Joe Armstrong">
+                </div>
+                
+                <!-- PHOTO 3 -->
+                <div class="gallery-item" onclick="openLightbox('photos/03.jpg')">
+                    <img src="photos/03.jpg" alt="Steve Dirnt">
+                </div>
+                
+                <!-- PHOTO 4 -->
+                <div class="gallery-item" onclick="openLightbox('photos/04.jpg')">
+                    <img src="photos/04.jpg" alt="Johnny White">
+                </div>
+                
+                <!-- PHOTO 5 -->
+                <div class="gallery-item" onclick="openLightbox('photos/05.jpg')">
+                    <img src="photos/05.jpg" alt="Bernie Cool">
+                </div>
+                
+                <!-- PHOTO 6 -->
+                <div class="gallery-item" onclick="openLightbox('photos/06.jpg')">
+                    <img src="photos/06.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 7 -->
+                <div class="gallery-item" onclick="openLightbox('photos/07.jpg')">
+                    <img src="photos/07.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 8 -->
+                <div class="gallery-item" onclick="openLightbox('photos/08.jpg')">
+                    <img src="photos/08.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 9 -->
+                <div class="gallery-item" onclick="openLightbox('photos/09.jpg')">
+                    <img src="photos/09.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 10 -->
+                <div class="gallery-item" onclick="openLightbox('photos/10.jpg')">
+                    <img src="photos/10.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 11 -->
+                <div class="gallery-item" onclick="openLightbox('photos/11.jpg')">
+                    <img src="photos/11.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 12 -->
+                <div class="gallery-item" onclick="openLightbox('photos/12.jpg')">
+                    <img src="photos/12.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                </div>
+                
+                <!-- PHOTO 13 -->
+                <div class="gallery-item" onclick="openLightbox('photos/13.jpg')">
+                    <img src="photos/13.jpg" alt="TGDB @ Tailgaters">
+                </div>
+
+                <!-- TO ADD MORE PHOTOS: Copy a block above, change the 'photos/filename.jpg' paths, and paste it here -->
+
+            </div>
+            <!-- PHOTO GALLERY END -->
+
+
+            <!-- VIDEOS GRID START -->
             <div class="media-grid">
-                <!-- Two YouTube placeholders, no audio box -->
                 <div class="video-box">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/iSxhActmjSg?si=q4C8x8tfLudl2TKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -90,8 +175,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="video-box">
                     <p style="text-align: center; color: #666; margin-top: 25%;">[ YOUTUBE EMBED 2 ]</p>
                 </div>
-				-->
             </div>
+			<!-- VIDEOS GRID END -->
         </section>
     </main>
 
@@ -150,5 +235,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4bb4da0e775347f1a2bf1a5d3f236640","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<!-- LIGHTBOX STRUCTURE -->
+    <div id="galleryLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged view">
+    </div>
+
+    <!-- LIGHTBOX INTERACTION SCRIPT -->
+    <script>
+        const lightbox = document.getElementById("galleryLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+            lightboxImg.src = ""; // Clear src to stop image loading artifacts
+        }
+    </script>
+
 </body>
 </html>
