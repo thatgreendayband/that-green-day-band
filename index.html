@@ -60,7 +60,7 @@
                             <div class="show-location">Bolingbrook, IL</div>
                         </div>
                         <!-- We changed href="#" to an onclick event -->
-                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS:7PM / SHOW: 9PM', '431 W Boughton Rd<br />Bolingbrook, IL 60440<br />(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS:7PM / SHOW: 9PM', '431 W Boughton Road', Bolingbrook, IL 60440', '(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
                     </div>
                     <!-- SHOW ITEM END -->
 
@@ -100,7 +100,9 @@
             <div class="modal-details">
                 <p id="modalDate">Date</p>
                 <p id="modalTime">Time</p>
-                <p id="modalLocation">Location</p>
+                <p id="modalAddress">(address not available)<br />
+                <p id="modalCityStateZip">(city not available)<br />
+                <p id="modalPhone">(phone number not available)</p>
                 <p id="modalNotes" style="color: var(--hot-pink); margin-top: 1.5rem; font-weight: bold;"></p>
             </div>
         </div>
@@ -110,11 +112,13 @@
     <script>
         const modal = document.getElementById("showModal");
 
-        function openModal(venue, date, time, location, notes) {
+        function openModal(venue, date, time, address, cityStateZip, phone, notes) {
             document.getElementById("modalVenue").innerText = venue;
             document.getElementById("modalDate").innerText = date;
             document.getElementById("modalTime").innerText = time;
-            document.getElementById("modalLocation").innerText = location;
+            document.getElementById("modalAddress").innerText = address;
+            document.getElementById("modalCityStateZip").innerText = cityStateZip;
+            document.getElementById("modalPhone").innerText = phone;
             document.getElementById("modalNotes").innerText = notes;
             modal.style.display = "flex";
         }
