@@ -37,7 +37,7 @@
         <section id="about">
             <div class="bio-grid">
                 <div class="bio-image">
-                    <img src="group-shot_2.png" alt="That Green Day Band" style="width: 100%; display: block;">
+                    <img src="group-shot.png" alt="That Green Day Band" style="width: 100%; display: block;">
                 </div>
                 <div class="bio-text glass-panel">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LOUD & <span class="text-neon">FAST</span></h2>
