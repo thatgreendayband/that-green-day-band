@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- [PASTE GTM HEAD SCRIPT HERE] -->
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FFG852B');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
     <!-- [PASTE GTM BODY NOSCRIPT BLOCK HERE] -->
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FFG852B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <nav class="glass-panel">
         <div class="logo">
@@ -41,43 +52,195 @@
                 </div>
                 <div class="bio-text glass-panel">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LOUD & <span class="text-neon">FAST</span></h2>
-                    <p>That Green Day Band doesn't just play the songs. We bring the chaotic, high-voltage energy of early 90s punk back to the stage.</p>
-                    <p>Focusing on the entire Green Day catalog from *Kerplunk!* to *Saviors* and everything in-between, TGDB strips away the bloat and delivers the raw anthems that defined a generation.</p>
+                    <p>That Green Day Band doesn't just play the songs. They bring the chaotic, high-voltage energy of early 90s punk back to the stage.</p>
+                    <p>Focusing on the entire Green Day catalog from <em>Kerplunk!</em> to <em>Saviors</em> and everything in-between, TGDB strips away the bloat and delivers the raw anthems that defined a generation.</p>
                 </div>
             </div>
         </section>
 
         <section id="shows">
             <h2 class="section-title text-outline">LIVE CONCERTS</h2>
-            <div class="shows-container glass-panel">
-                <p style="font-family: 'Anton'; font-size: 1.5rem; letter-spacing: 2px;">[ PASTE BANDSINTOWN IFRAME HERE ]</p>
+            <div class="glass-panel">
+                <div class="show-list">
+                    
+                    <!-- SHOW ITEM START -->
+                    <div class="show-item">
+                        <div class="show-date">JUN 20</div>
+                        <div class="show-venue">
+                            Tailgaters
+                            <div class="show-location">Bolingbrook, IL</div>
+                        </div>
+                        <!-- We changed href="#" to an onclick event -->
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS: 7PM / SHOW: 9PM', '431 W Boughton Road', 'Bolingbrook, IL 60440', '(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
+                    </div>
+                    <!-- SHOW ITEM END -->
+
+                </div>
             </div>
         </section>
 
         <section id="media">
-            <h2 class="section-title">THE <span class="text-neon">ARCHIVE</span></h2>
+            <h2 class="section-title">MEDIA <span class="text-neon">ARCHIVE</span></h2>
+
+            <!-- VIDEOS GRID START -->
             <div class="media-grid">
                 <div class="video-box">
-                    [ YOUTUBE EMBED ]
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSxhActmjSg?si=q4C8x8tfLudl2TKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="video-box">
-                    [ YOUTUBE EMBED ]
-                </div>
-                <div class="audio-box glass-panel">
-                    <p style="font-family: 'Anton'; font-size: 1.5rem; letter-spacing: 2px; color: #666;">[ SPOTIFY PLAYER EMBED ]</p>
+                <!--
+				<div class="video-box">
+                    <p style="text-align: center; color: #666; margin-top: 25%;">[ YOUTUBE EMBED 2 ]</p>
                 </div>
             </div>
+			<!-- VIDEOS GRID END -->
+            
+            <!-- PHOTO GALLERY START -->
+            <div class="photo-gallery">
+                
+                <!-- PHOTO 1 -->
+                <div class="gallery-item" onclick="openLightbox('photos/01.jpg')">
+                    <img src="photos/01.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 2 -->
+                <div class="gallery-item" onclick="openLightbox('photos/02.jpg')">
+                    <img src="photos/02.jpg" alt="Matty Joe Armstrong">
+                </div>
+                
+                <!-- PHOTO 3 -->
+                <div class="gallery-item" onclick="openLightbox('photos/03.jpg')">
+                    <img src="photos/03.jpg" alt="Steve Dirnt">
+                </div>
+                
+                <!-- PHOTO 4 -->
+                <div class="gallery-item" onclick="openLightbox('photos/04.jpg')">
+                    <img src="photos/04.jpg" alt="Johnny White">
+                </div>
+                
+                <!-- PHOTO 5 -->
+                <div class="gallery-item" onclick="openLightbox('photos/05.jpg')">
+                    <img src="photos/05.jpg" alt="Bernie Cool">
+                </div>
+                
+                <!-- PHOTO 6 -->
+                <div class="gallery-item" onclick="openLightbox('photos/06.jpg')">
+                    <img src="photos/06.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 7 -->
+                <div class="gallery-item" onclick="openLightbox('photos/07.jpg')">
+                    <img src="photos/07.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 8 -->
+                <div class="gallery-item" onclick="openLightbox('photos/08.jpg')">
+                    <img src="photos/08.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 9 -->
+                <div class="gallery-item" onclick="openLightbox('photos/09.jpg')">
+                    <img src="photos/09.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 10 -->
+                <div class="gallery-item" onclick="openLightbox('photos/10.jpg')">
+                    <img src="photos/10.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 11 -->
+                <div class="gallery-item" onclick="openLightbox('photos/11.jpg')">
+                    <img src="photos/11.jpg" alt="TGDB @ Tailgaters">
+                </div>
+                
+                <!-- PHOTO 12 -->
+                <div class="gallery-item" onclick="openLightbox('photos/12.jpg')">
+                    <img src="photos/12.jpg" alt="TGDB @ Tailgaters">
+                </div>
+
+                <!-- TO ADD MORE PHOTOS: Copy a block above, change the 'photos/filename.jpg' paths, and paste it here -->
+
+            </div>
+            <!-- PHOTO GALLERY END -->
         </section>
     </main>
 
     <footer>
         <div class="socials">
-            <a href="#">INSTAGRAM</a>
-            <a href="#">YOUTUBE</a>
-            <a href="#">BOOKING</a>
+            <a href="https://www.instagram.com/thatgreendayband/" target="_blank">INSTAGRAM</a>
+            <a href="https://www.facebook.com/thatgreendayband" target="_blank">FACEBOOK</a>
+            <a href="https://www.youtube.com/@ThatGreenDayBand" target="_blank">YOUTUBE</a>
+            <a href="https://www.tiktok.com/@thatgreendayband" target="_blank">TIKTOK</a>
+            <a href="mailto:thatgreendayband@gmail.com" target="_blank">BOOKING/CONTACT</a>
         </div>
         <p style="color: #666; font-size: 0.9rem;">&copy; 2026 That Green Day Band.</p>
     </footer>
+
+    <!-- MODAL HTML STRUCTURE -->
+    <div id="showModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title" id="modalVenue">Venue Name</h3>
+            <div class="modal-details">
+                <p id="modalDate">Date</p>
+                <p id="modalTime">Time</p>
+                <p id="modalAddress">(address not available)<br />
+                <p id="modalCityStateZip">(city not available)<br />
+                <p id="modalPhone">(phone number not available)</p>
+                <p id="modalNotes" style="color: var(--hot-pink); margin-top: 1.5rem; font-weight: bold;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL INTERACTION -->
+    <script>
+        const modal = document.getElementById("showModal");
+
+        function openModal(venue, date, time, address, cityStateZip, phone, notes) {
+            document.getElementById("modalVenue").innerText = venue;
+            document.getElementById("modalDate").innerText = date;
+            document.getElementById("modalTime").innerText = time;
+            document.getElementById("modalAddress").innerText = address;
+            document.getElementById("modalCityStateZip").innerText = cityStateZip;
+            document.getElementById("modalPhone").innerText = phone;
+            document.getElementById("modalNotes").innerText = notes;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal if user clicks anywhere outside the box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4bb4da0e775347f1a2bf1a5d3f236640","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<!-- LIGHTBOX STRUCTURE -->
+    <div id="galleryLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged view">
+    </div>
+
+    <!-- LIGHTBOX INTERACTION SCRIPT -->
+    <script>
+        const lightbox = document.getElementById("galleryLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+            lightboxImg.src = ""; // Clear src to stop image loading artifacts
+        }
+    </script>
+
 </body>
 </html>
