@@ -32,6 +32,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="#about">Bio</a></li>
             <li><a href="#shows">Tour</a></li>
             <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Find Us</a></li>
         </ul>
     </nav>
 
@@ -165,6 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </main>
 
     <footer>
+	<section id="contact">
         <div class="socials">
             <a href="https://www.instagram.com/thatgreendayband/" target="_blank">INSTAGRAM</a>
             <a href="https://www.facebook.com/thatgreendayband" target="_blank">FACEBOOK</a>
@@ -173,6 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="mailto:thatgreendayband@gmail.com" target="_blank">BOOKING/CONTACT</a>
         </div>
         <p style="color: #666; font-size: 0.9rem;">&copy; 2026 That Green Day Band.</p>
+	</section>
     </footer>
 
     <!-- MODAL HTML STRUCTURE -->
