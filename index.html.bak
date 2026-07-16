@@ -53,8 +53,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="bio-text glass-panel">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LOUD & <span class="text-neon">FAST</span></h2>
-                    <p>That Green Day Band doesn't just play the songs. They bring the chaotic, high-voltage energy of early 90s punk back to the stage.</p>
-                    <p>Focusing on the entire Green Day catalog from <em>Kerplunk!</em> to <em>Saviors</em> and everything in-between, TGDB strips away the bloat and delivers the raw anthems that defined a generation.</p>
+                    <p><em>That Green Day Band</em> doesn't just play the songs. They bring the chaotic, high-voltage energy of Billie Joe Armstrong and crew back to the stage.</p>
+                    <p>Focusing on the entire Green Day catalog from <em>Kerplunk!</em> to <em>Saviors</em> and everything in-between, since 2008 <em>That Green Day Band</em> have been rocking the raw punk-rock anthems that defined a generation.</p>
                 </div>
             </div>
         </section>
@@ -73,6 +73,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <!-- We changed href="#" to an onclick event -->
                         <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS: 7PM / SHOW: 9PM', '431 W Boughton Road', 'Bolingbrook, IL 60440', '(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
+                    </div>
+                    <!-- SHOW ITEM END -->
+					
+                    <!-- SHOW ITEM START -->
+                    <div class="show-item">
+                        <div class="show-date">AUG 14</div>
+                        <div class="show-venue">
+                            The Piazza
+                            <div class="show-location">Aurora, IL</div>
+                        </div>
+                        <!-- We changed href="#" to an onclick event -->
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('The Piazza', 'August 14th, 2026', 'DOORS: 7PM / SHOW: 9PM', '85 Executive Drive', 'Aurora, IL 60504', '(630) 978-2088', `<div>
+						   <p>21+  Under 21 w/ parental supervision</p>
+						   <a href='https://www.eventim.us/event/the-piazza-presents-that-green-day-band-and-friends/698794' target='_blank'>GET TICKETS</a>
+						   <br><br>
+						   <img src='2026-08-14_qr.png'
+								alt='QR code'
+								style='width:100%; max-width:350px; border-radius:12px;'>
+							</div>`
+					   )">Details</a>
                     </div>
                     <!-- SHOW ITEM END -->
 
@@ -171,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<img src="logo.png" />
 	</div>
 	
-    <footer>
+    <footer style="padding-top:0px; margin-top:0px;">
 	<section id="contact">
         <div class="socials">
             <a href="https://www.instagram.com/thatgreendayband/" target="_blank">INSTAGRAM</a>
@@ -195,7 +215,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p id="modalAddress">(address not available)<br />
                 <p id="modalCityStateZip">(city not available)<br />
                 <p id="modalPhone">(phone number not available)</p>
-                <p id="modalNotes" style="color: var(--hot-pink); margin-top: 1.5rem; font-weight: bold;"></p>
+                <!-- This is a div so the final openModal() argument can contain links, images, and other HTML. -->
+                <div id="modalNotes" style="color: var(--hot-pink); margin-top: 1.5rem; font-weight: bold;"></div>
             </div>
         </div>
     </div>
@@ -211,7 +232,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById("modalAddress").innerText = address;
             document.getElementById("modalCityStateZip").innerText = cityStateZip;
             document.getElementById("modalPhone").innerText = phone;
-            document.getElementById("modalNotes").innerText = notes;
+            // The notes argument is trusted, author-supplied HTML from this page.
+            document.getElementById("modalNotes").innerHTML = notes;
             modal.style.display = "flex";
         }
 
