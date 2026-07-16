@@ -349,15 +349,13 @@ footer {
 	margin-top: 1.5rem;
 	font-weight: bold;
 }
-
-.show-detail-link {
-    color: #fff;
+#modalNotes a {
+	color: #fff;
     cursor: pointer;
     transition: color 0.3s;
 }
-
-.show-detail-link:hover {
-    color: var(--hot-pink);
+#modalNotes a:hover {
+	color: var(--hot-pink);;
 }
 
 .close-btn {
