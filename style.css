@@ -350,6 +350,16 @@ footer {
 	font-weight: bold;
 }
 
+.show-detail-link {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.show-detail-link:hover {
+    color: var(--hot-pink);
+}
+
 .close-btn {
     color: #fff;
     position: absolute;
