@@ -53,8 +53,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="bio-text glass-panel">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LOUD & <span class="text-neon">FAST</span></h2>
-                    <p>That Green Day Band doesn't just play the songs. They bring the chaotic, high-voltage energy of early 90s punk back to the stage.</p>
-                    <p>Focusing on the entire Green Day catalog from <em>Kerplunk!</em> to <em>Saviors</em> and everything in-between, TGDB strips away the bloat and delivers the raw anthems that defined a generation.</p>
+                    <p><em>That Green Day Band</em> doesn't just play the songs. They bring the chaotic, high-voltage energy of Billie Joe Armstrong and crew back to the stage.</p>
+                    <p>Focusing on the entire Green Day catalog from <em>Kerplunk!</em> to <em>Saviors</em> and everything in-between, since 2008 <em>That Green Day Band</em> have been rocking the raw punk-rock anthems that defined a generation.</p>
                 </div>
             </div>
         </section>
@@ -73,6 +73,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <!-- We changed href="#" to an onclick event -->
                         <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS: 7PM / SHOW: 9PM', '431 W Boughton Road', 'Bolingbrook, IL 60440', '(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
+                    </div>
+                    <!-- SHOW ITEM END -->
+					
+                    <!-- SHOW ITEM START -->
+                    <div class="show-item">
+                        <div class="show-date">AUG 14</div>
+                        <div class="show-venue">
+                            The Piazza
+                            <div class="show-location">Aurora, IL</div>
+                        </div>
+                        <!-- We changed href="#" to an onclick event -->
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('The Piazza', 'August 14th, 2026', 'DOORS: 7PM / SHOW: 9PM', '85 Executive Drive', 'Aurora, IL 60504', '(630) 978-2088', '21+ / Under 21 w/ parental supervision')">Details</a>
                     </div>
                     <!-- SHOW ITEM END -->
 
@@ -171,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<img src="logo.png" />
 	</div>
 	
-    <footer>
+    <footer style="padding-top:0px; margin-top:0px;">
 	<section id="contact">
         <div class="socials">
             <a href="https://www.instagram.com/thatgreendayband/" target="_blank">INSTAGRAM</a>
