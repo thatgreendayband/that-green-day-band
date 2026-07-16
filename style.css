@@ -349,9 +349,6 @@ footer {
 	margin-top: 1.5rem;
 	font-weight: bold;
 }
-#modalNotes a {
-	color: var(--hot-pink);
-}
 
 .close-btn {
     color: #fff;
