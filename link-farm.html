@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#050505">
+    <meta name="description" content="Official links for That Green Day Band.">
+    <title>That Green Day Band | Official Links</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --neon-green: #39FF14;
+            --hot-pink: #FF007F;
+            --dark-bg: #050505;
+            --glass-bg: rgba(25, 25, 25, 0.68);
+            --glass-border: rgba(255, 255, 255, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            min-height: 100dvh;
+            background-color: var(--dark-bg);
+            background-image:
+                radial-gradient(circle at 15% 45%, rgba(57, 255, 20, 0.12) 0%, transparent 48%),
+                radial-gradient(circle at 88% 24%, rgba(255, 0, 127, 0.11) 0%, transparent 45%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .link-farm-shell {
+            width: 100%;
+            height: 100vh;
+            height: 100svh;
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:
+                max(12px, env(safe-area-inset-top))
+                max(12px, env(safe-area-inset-right))
+                max(12px, env(safe-area-inset-bottom))
+                max(12px, env(safe-area-inset-left));
+            overflow: hidden;
+        }
+
+        .link-card {
+            width: min(100%, 520px);
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: clamp(10px, 2vh, 18px);
+            padding: clamp(16px, 4vw, 28px);
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 30px rgba(57, 255, 20, 0.06);
+            overflow: hidden;
+        }
+
+        .link-farm-header {
+            flex: 0 1 auto;
+            min-height: 0;
+            text-align: center;
+        }
+
+        .band-logo-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            line-height: 0;
+        }
+
+        .band-logo {
+            display: block;
+            width: min(68vw, 280px);
+            max-width: 100%;
+            max-height: clamp(68px, 17vh, 118px);
+            object-fit: contain;
+            filter: drop-shadow(0 0 12px rgba(57, 255, 20, 0.38));
+        }
+
+        .eyebrow {
+            margin-top: clamp(5px, 1vh, 10px);
+            color: var(--hot-pink);
+            font-size: clamp(0.65rem, 2.5vw, 0.78rem);
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            margin-top: 3px;
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(1.75rem, 8vw, 2.75rem);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+        }
+
+        .page-title span {
+            color: var(--neon-green);
+        }
+
+        .link-grid {
+            flex: 0 1 auto;
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(8px, 1.4vh, 12px);
+        }
+
+        .social-link {
+            min-width: 0;
+            min-height: clamp(52px, 8.2vh, 68px);
+            display: grid;
+            grid-template-columns: clamp(42px, 12vw, 52px) minmax(0, 1fr) auto;
+            align-items: center;
+            gap: clamp(9px, 3vw, 14px);
+            padding: clamp(8px, 1.5vh, 12px) clamp(11px, 3vw, 16px);
+            color: #fff;
+            background: rgba(0, 0, 0, 0.42);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-left: 4px solid var(--neon-green);
+            border-radius: 12px;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .social-link:hover,
+        .social-link:focus-visible {
+            background: rgba(0, 0, 0, 0.68);
+            border-color: rgba(57, 255, 20, 0.5);
+            transform: translateX(5px);
+            outline: none;
+        }
+
+        .social-link:active {
+            transform: scale(0.985);
+        }
+
+        .platform-badge {
+            width: clamp(42px, 12vw, 52px);
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            color: var(--dark-bg);
+            background: var(--neon-green);
+            border-radius: 10px;
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(0.88rem, 3.8vw, 1.08rem);
+            letter-spacing: 0.03em;
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
+        }
+
+        .link-copy {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .link-copy strong {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(1.03rem, 4.5vw, 1.3rem);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+        }
+
+        .link-copy small {
+            min-width: 0;
+            overflow: hidden;
+            color: #aaa;
+            font-size: clamp(0.7rem, 3vw, 0.86rem);
+            line-height: 1.15;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .link-arrow {
+            color: var(--hot-pink);
+            font-size: clamp(1.2rem, 5vw, 1.55rem);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        /* Keep the full page visible on short phones without vertical scrolling. */
+        @media (max-height: 620px) and (orientation: portrait) {
+            .link-card {
+                gap: 8px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+
+            .band-logo {
+                max-height: 68px;
+            }
+
+            .eyebrow {
+                margin-top: 3px;
+            }
+
+            .page-title {
+                font-size: 1.65rem;
+            }
+
+            .link-grid {
+                gap: 7px;
+            }
+
+            .social-link {
+                min-height: 48px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+
+            .platform-badge {
+                width: 40px;
+            }
+        }
+
+        /* Also remain non-scrollable if a phone is rotated sideways. */
+        @media (orientation: landscape) and (max-height: 540px) {
+            .link-card {
+                width: min(100%, 820px);
+                display: grid;
+                grid-template-columns: minmax(170px, 0.8fr) minmax(0, 1.5fr);
+                align-items: center;
+                gap: 16px;
+                padding: 14px;
+            }
+
+            .band-logo {
+                width: min(30vw, 230px);
+                max-height: 90px;
+            }
+
+            .page-title {
+                font-size: clamp(1.55rem, 4vw, 2.2rem);
+            }
+
+            .link-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+            }
+
+            .social-link {
+                min-height: 62px;
+                grid-template-columns: 42px minmax(0, 1fr) auto;
+                padding: 8px 10px;
+            }
+
+            .platform-badge {
+                width: 42px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .social-link {
+                transition: none;
+            }
+        }
+    </style>
+
+    <!-- Google Tag Manager: matches the main website so QR visits can be measured there too. -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5FFG852B');
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FFG852B"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <main class="link-farm-shell">
+        <section class="link-card" aria-labelledby="linkFarmTitle">
+            <header class="link-farm-header">
+                <a class="band-logo-link" href="https://thatgreendayband.com/" aria-label="Visit the That Green Day Band website">
+                    <img class="band-logo" src="logo.png" alt="That Green Day Band">
+                </a>
+                <p class="eyebrow">Official Links</p>
+                <h1 class="page-title" id="linkFarmTitle">Find Us <span>Online</span></h1>
+            </header>
+
+            <nav class="link-grid" aria-label="That Green Day Band official links">
+                <a class="social-link" href="https://thatgreendayband.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit thatgreendayband.com">
+                    <span class="platform-badge" aria-hidden="true">WWW</span>
+                    <span class="link-copy">
+                        <strong>Website</strong>
+                        <small>thatgreendayband.com</small>
+                    </span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="social-link" href="https://www.instagram.com/thatgreendayband/" target="_blank" rel="noopener noreferrer" aria-label="Follow That Green Day Band on Instagram">
+                    <span class="platform-badge" aria-hidden="true">IG</span>
+                    <span class="link-copy">
+                        <strong>Instagram</strong>
+                        <small>@ThatGreenDayBand</small>
+                    </span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="social-link" href="https://www.facebook.com/thatgreendayband" target="_blank" rel="noopener noreferrer" aria-label="Follow That Green Day Band on Facebook">
+                    <span class="platform-badge" aria-hidden="true">FB</span>
+                    <span class="link-copy">
+                        <strong>Facebook</strong>
+                        <small>@ThatGreenDayBand</small>
+                    </span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="social-link" href="https://www.youtube.com/@ThatGreenDayBand" target="_blank" rel="noopener noreferrer" aria-label="Watch That Green Day Band on YouTube">
+                    <span class="platform-badge" aria-hidden="true">YT</span>
+                    <span class="link-copy">
+                        <strong>YouTube</strong>
+                        <small>@ThatGreenDayBand</small>
+                    </span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>
