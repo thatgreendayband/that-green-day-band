@@ -630,3 +630,147 @@ body.modal-open {
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 }
+/* DEFINITIVE MOBILE VIEWPORT FIX */
+/* Prevent fixed-position elements from expanding the mobile layout viewport. */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fully replace the desktop nav positioning on phones. */
+    nav.glass-panel {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-width: none;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.65rem 0.6rem;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    nav.glass-panel,
+    nav.glass-panel * {
+        min-width: 0;
+    }
+
+    nav .logo {
+        width: 100%;
+        line-height: 0;
+        text-align: center;
+    }
+
+    nav .logo img {
+        height: 34px;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.35rem 0.1rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.45px;
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    /* Size the modal against the actual phone viewport and prohibit side-scrolling. */
+    .modal {
+        inset: 0;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        max-width: 100vw;
+        padding: 12px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
+        margin: auto;
+        padding: 2.75rem 1rem 1.25rem;
+        overflow-x: hidden;
+    }
+
+    .previous-shows-modal-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        max-height: calc(100dvh - 24px);
+        margin: auto;
+        padding: 2.75rem 0.75rem 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .previous-shows-modal-content .modal-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 10vw, 2.5rem);
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .previous-shows-table-wrap,
+    .previous-shows-table,
+    .previous-shows-table tbody,
+    .previous-shows-table tr,
+    .previous-shows-table td {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .previous-shows-table td {
+        grid-template-columns: minmax(76px, 90px) minmax(0, 1fr);
+        gap: 0.65rem;
+        padding: 0.9rem 0.75rem;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 370px) {
+    nav.glass-panel {
+        left: 8px;
+        right: 8px;
+        padding-right: 0.35rem;
+        padding-left: 0.35rem;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+        letter-spacing: 0.2px;
+    }
+}
