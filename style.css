@@ -317,6 +317,37 @@ footer {
     color: var(--dark-bg);
 }
 
+/* PREVIOUS SHOWS LINK */
+.previous-shows-link-wrap {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.previous-shows-btn {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+    text-decoration-color: var(--hot-pink);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+.previous-shows-btn:hover,
+.previous-shows-btn:focus-visible {
+    color: var(--hot-pink);
+    outline: none;
+    text-shadow: 0 0 14px rgba(255, 0, 127, 0.5);
+    transform: translateY(-2px);
+}
+
 /* MODAL STYLES */
 .modal {
     display: none; 
@@ -385,6 +416,93 @@ footer {
     line-height: 1.6;
     margin-bottom: 1rem;
     color: #ddd;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.close-btn-button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    line-height: 1;
+}
+
+/* PREVIOUS SHOWS MODAL */
+.previous-shows-modal-content {
+    max-height: 85vh;
+    max-width: 900px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.previous-shows-modal-content .modal-title {
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.previous-shows-intro {
+    color: #aaa;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.previous-shows-table-wrap {
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.previous-shows-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.previous-shows-table th,
+.previous-shows-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+.previous-shows-table th {
+    background: rgba(57, 255, 20, 0.12);
+    border-bottom: 2px solid var(--neon-green);
+    color: var(--neon-green);
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.previous-shows-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ddd;
+}
+
+.previous-shows-table td:first-child {
+    color: var(--hot-pink);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.previous-shows-table tbody tr {
+    background: rgba(255, 255, 255, 0.025);
+    transition: background 0.3s;
+}
+
+.previous-shows-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.previous-shows-table tbody tr:hover {
+    background: rgba(57, 255, 20, 0.08);
+}
+
+.previous-shows-table tbody tr:last-child td {
+    border-bottom: 0;
 }
 
 /* PHOTO GALLERY GRID */
@@ -457,4 +575,58 @@ footer {
 
 .lightbox-close:hover {
     color: var(--hot-pink);
+}
+
+/* PREVIOUS SHOWS - MOBILE */
+@media (max-width: 650px) {
+    .previous-shows-modal-content {
+        padding: 2.75rem 1rem 1.25rem;
+    }
+
+    .previous-shows-table-wrap {
+        border: 0;
+        overflow: visible;
+    }
+
+    .previous-shows-table,
+    .previous-shows-table tbody,
+    .previous-shows-table tr,
+    .previous-shows-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .previous-shows-table thead {
+        display: none;
+    }
+
+    .previous-shows-table tr {
+        border: 1px solid var(--glass-border);
+        border-left: 4px solid var(--neon-green);
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .previous-shows-table td {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: 90px 1fr;
+        padding: 0.9rem 1rem;
+        white-space: normal;
+    }
+
+    .previous-shows-table td::before {
+        color: var(--neon-green);
+        content: attr(data-label);
+        font-family: 'Anton', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .previous-shows-table tbody tr:last-child td:not(:last-child),
+    .previous-shows-table td:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 }

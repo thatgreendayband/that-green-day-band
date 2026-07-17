@@ -66,17 +66,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <!-- SHOW ITEM START -->
                     <div class="show-item">
-                        <div class="show-date">JUN 20</div>
-                        <div class="show-venue">
-                            Tailgaters
-                            <div class="show-location">Bolingbrook, IL</div>
-                        </div>
-                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Tailgaters Sports Bar', 'June 20th, 2026', 'DOORS: 7PM / SHOW: 9PM', '431 W Boughton Road', 'Bolingbrook, IL 60440', '(630) 679-1994', 'w/ Chart Attack!!')">Details</a>
-                    </div>
-                    <!-- SHOW ITEM END -->
-					
-                    <!-- SHOW ITEM START -->
-                    <div class="show-item">
                         <div class="show-date">AUG 14</div>
                         <div class="show-venue">
                             The Piazza
@@ -95,6 +84,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <!-- SHOW ITEM END -->
 
+                </div>
+
+                <div class="previous-shows-link-wrap">
+                    <button type="button" class="previous-shows-btn" onclick="openPreviousShowsModal()">
+                        Previous Shows
+                    </button>
                 </div>
             </div>
         </section>
@@ -211,8 +206,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="modal-details">
                 <p id="modalDate">Date</p>
                 <p id="modalTime">Time</p>
-                <p id="modalAddress">(address not available)<br />
-                <p id="modalCityStateZip">(city not available)<br />
+                <p id="modalAddress">(address not available)</p>
+                <p id="modalCityStateZip">(city not available)</p>
                 <p id="modalPhone">(phone number not available)</p>
                 <!-- This is a div so the final openModal() argument can contain links, images, and other HTML. -->
                 <div id="modalNotes"></div>
@@ -220,9 +215,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
+    <!-- PREVIOUS SHOWS MODAL -->
+    <div id="previousShowsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="previousShowsTitle">
+        <div class="modal-content previous-shows-modal-content">
+            <button type="button" class="close-btn close-btn-button" onclick="closePreviousShowsModal()" aria-label="Close previous shows">&times;</button>
+            <h3 class="modal-title" id="previousShowsTitle">Previous Shows</h3>
+            <p class="previous-shows-intro">That Green Day Band has rocked the following venues</p>
+
+            <div class="previous-shows-table-wrap">
+                <table class="previous-shows-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">City / State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- PREVIOUS SHOW ENTRY START -->
+                        <tr>
+                            <td data-label="Date">June 20, 2026</td>
+                            <td data-label="Venue">Tailgaters</td>
+                            <td data-label="City / State">Bolingbrook, IL</td>
+                        </tr>
+                        <!-- PREVIOUS SHOW ENTRY END -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- JAVASCRIPT FOR MODAL INTERACTION -->
     <script>
         const modal = document.getElementById("showModal");
+        const previousShowsModal = document.getElementById("previousShowsModal");
+
+        function updateModalScrollLock() {
+            const aModalIsOpen = modal.style.display === "flex" || previousShowsModal.style.display === "flex";
+            document.body.classList.toggle("modal-open", aModalIsOpen);
+        }
 
         function openModal(venue, date, time, address, cityStateZip, phone, notes) {
             document.getElementById("modalVenue").innerText = venue;
@@ -234,18 +265,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // The notes argument is trusted, author-supplied HTML from this page.
             document.getElementById("modalNotes").innerHTML = notes;
             modal.style.display = "flex";
+            updateModalScrollLock();
         }
 
         function closeModal() {
             modal.style.display = "none";
+            updateModalScrollLock();
         }
 
-        // Close modal if user clicks anywhere outside the box
-        window.onclick = function(event) {
-            if (event.target == modal) {
+        function openPreviousShowsModal() {
+            previousShowsModal.style.display = "flex";
+            updateModalScrollLock();
+        }
+
+        function closePreviousShowsModal() {
+            previousShowsModal.style.display = "none";
+            updateModalScrollLock();
+        }
+
+        // Close either modal when the dark overlay is clicked.
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
                 closeModal();
             }
-        }
+
+            if (event.target === previousShowsModal) {
+                closePreviousShowsModal();
+            }
+        });
+
+        // Close open modals with the Escape key.
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+                closePreviousShowsModal();
+            }
+        });
     </script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4bb4da0e775347f1a2bf1a5d3f236640","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
