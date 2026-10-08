@@ -102,23 +102,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="glass-panel">
                 <div class="show-list">
 				
-				<p style="text-aling:center;margin:auto;">NEW SHOW ANNOUNCEMENTS COMING SOON!</p>
+				<!-- <p style="text-aling:center;margin:auto;">NEW SHOW ANNOUNCEMENTS COMING SOON!</p> -->
                     
-                    <!-- SHOW ITEM START 
+                    <!-- SHOW ITEM START -->
                     <div class="show-item">
-                        <div class="show-date">AUG 14<br />2026</div>
+                        <div class="show-date">FEB 6<br />2027</div>
                         <div class="show-venue">
-                            The Piazza
-                            <div class="show-location">Aurora, IL</div>
+                            WC Social Club
+                            <div class="show-location">St. Charles, IL</div>
                         </div>
-                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('The Piazza', 'August 14th, 2026', 'DOORS: 7PM / SHOW: 8PM', '85 Executive Drive', 'Aurora, IL 60504', '(630) 978-2088', `<div>
-						   <p>21+ or Under 21 with parental supervision<br />
-						   <span style='font-size:0.7em; font-style:italic; font-weight:normal;'>w/ opening acts <a href='https://www.largemouthband.com/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>Largemouth</span></a> (as Nirvana)<br>and Jay Bennet & the Deep Cut (solo electric covers)</span></p>
-						   <a href='https://www.eventim.us/event/the-piazza-presents-that-green-day-band-and-friends/698794' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>GET TICKETS</span></a>
-						   <br><br>
-						   <img src='2026-08-14_qr.png'
-								alt='QR code'
-								style='width:100%; max-width:350px; border-radius:12px;'>
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('WC Social Club', 'February 6th, 2027', 'DOORS: 6PM / SHOW: 7PM', '920 Roosevelt Road', 'St. Charles, IL 60185', '(630) 473-0099', `<div>
+						   <p><span style='font-size:0.7em; font-style:italic; font-weight:normal;'>w/ <a href='https://www.facebook.com/jaggedlittlepillband/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>Jagged Little Pill</span></a> (Alanis Morissette tribute)<br>and <a href='https://www.facebook.com/chicagostribute/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>Too Fighters</span></a> (Foo Fighters tribute)</span></p>
+						   <a href='https://www.thewcsocialclub.com/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>www.thewcsocialclub.com</span></a>
+							</div>`
+					   )">Details</a>
+                    </div>
+                    <!-- SHOW ITEM END -->
+					
+				
+                    <!-- SHOW ITEM START -->
+                    <div class="show-item">
+                        <div class="show-date">JUNE 5<br />2027</div>
+                        <div class="show-venue">
+                            Gilberts Community Days
+                            <div class="show-location">Gilberts, IL</div>
+                        </div>
+                        <a href="javascript:void(0);" class="show-btn" onclick="openModal('Gilberts Community Days', 'June 5th, 2027', 'TGDB:7:00-8:30PM', 'Town Square Park', 'Gilberts, IL', '(630) 473-0099', `<div>
+						   <p><span style='font-size:0.7em; font-style:italic; font-weight:normal;'>w/ <a href='https://allamericanthrowbacks.com/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>All American Throwbacks</span></a> (pop-punk/emo tribute)</span></p>
+						   <a href='https://www.gilbertscommunitydays.com/' target='_blank' rel='noopener noreferrer'><span class='show-detail-link'>www.gilbertscommunitydays.com</span></a>
 							</div>`
 					   )">Details</a>
                     </div>
@@ -264,9 +275,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="modal-details">
                 <p id="modalDate">Date</p>
                 <p id="modalTime">Time</p>
-                <p id="modalAddress">(address not available)</p>
-                <p id="modalCityStateZip">(city not available)</p>
-                <p id="modalPhone">(phone number not available)</p>
+                <p><span id="modalAddress">(address not available)</span><br/>
+                <span id="modalCityStateZip">(city not available)</span><br/>
+                <span id="modalPhone">(phone number not available)</p>
                 <!-- This is a div so the final openModal() argument can contain links, images, and other HTML. -->
                 <div id="modalNotes"></div>
             </div>
